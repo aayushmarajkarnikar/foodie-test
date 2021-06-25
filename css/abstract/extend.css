@@ -1,0 +1,23 @@
+.button {
+  text-transform: uppercase;
+  font-size: var(--foodie-base-font);
+  padding: 9px 28px;
+  border-radius: var(--foodie-radius);
+  color: white;
+  font-family: "Graphik-Medium";
+  letter-spacing: 1.5px;
+  border: transparent;
+}
+
+.a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.fonts {
+  font-size: 60px;
+  font-family: "Graphik-Semibold";
+  font-color: var(--foodie-text-color);
+}
+
+/*# sourceMappingURL=extend.css.map */

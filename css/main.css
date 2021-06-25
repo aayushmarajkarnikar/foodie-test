@@ -1,0 +1,174 @@
+.button, .secondary-button--filled, .primary-button--unfilled {
+  text-transform: uppercase;
+  font-size: var(--foodie-base-font);
+  padding: 9px 28px;
+  border-radius: var(--foodie-radius);
+  color: white;
+  font-family: "Graphik-Medium";
+  letter-spacing: 1.5px;
+  border: transparent;
+}
+
+.a, .secondary-button--filled a, .primary-button--unfilled a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.fonts, .main-content__title h1 {
+  font-size: 60px;
+  font-family: "Graphik-Semibold";
+  font-color: var(--foodie-text-color);
+}
+
+:root {
+  --foodie-bg: #f8fcff;
+  --foodie-input-bg: #f4f8fb;
+  --foodie-primary: #5bc9bc;
+  --foodie-secondary: red;
+  --foodie-text-color: #363636;
+  --foodie-text-colorsecondary: #5e5e5e;
+  --foodie-link-color: #838282;
+  --foodie-cardtitle-color: #2a636d;
+  --foodie-seperator-color: #2a636d;
+  --foodie-radius: 5px;
+  --foodie-small-font: 14px;
+  --foodie-base-font: 16px;
+  --foodie-large-font: 60px;
+  --foodie-medium-font: 34px;
+  --foodie-subtitle-font: 12px;
+  --foodie-font-family: "Graphik", -apple-system, system-ui,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      sans-serif;
+  --foodie-border-color: #f3f3f4;
+}
+
+body {
+  background: var(--foodie-bg);
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-wrap {
+  margin-top: 40px;
+}
+.header-wrap__brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrap__brand__navigation ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.primary-button--unfilled {
+  background-color: transparent;
+}
+.primary-button--unfilled a {
+  color: var(--foodie-link-color);
+}
+
+.secondary-button--filled {
+  background-color: black;
+}
+.secondary-button--filled a {
+  font-size: var(--foodie-small-font);
+  color: white;
+}
+.secondary-button--filled:hover {
+  background-color: var(--foodie-primary);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+.main-content__title h1 {
+  text-align: center;
+}
+.main-content__search-bar {
+  display: flex;
+  padding: 24px;
+  background: var(--foodie-input-bg);
+  margin-top: 32px;
+}
+.main-content__search-bar__input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.main-content__search-bar input {
+  width: 484px;
+  height: 62px;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-family: "Graphik-Regular";
+  font-weight: normal;
+  border-radius: 5px;
+  border-style: none;
+  color: var(--foodie-text-color);
+  margin-right: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+}
+.main-content__search-bar img {
+  position: absolute;
+  right: 2rem;
+}
+.main-content__search-bar__select-meals-button {
+  display: flex;
+}
+.main-content__search-bar__select-meals-button .select-meals-button--filled {
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+  height: 62px;
+  padding-right: 50px;
+  padding-left: 20px;
+  margin-right: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main-content__search-bar__select-meals-button .select-meals-button--filled select {
+  -webkit-appearance: none;
+  color: var(--foodie-text-color);
+  font-family: "Graphik-Regular";
+  outline: none;
+  border: none;
+  text-transform: none;
+}
+.main-content__search-bar__select-meals-button .select-meals-button--filled img {
+  position: absolute;
+  right: 16px;
+}
+.main-content__search-bar__select-meals-button .cook-button--filled {
+  background-color: var(--foodie-primary);
+  padding: 19px 40px;
+}
+.main-content__search-bar__select-meals-button .cook-button--filled:hover {
+  background-color: black;
+}
+
+.images__image-top {
+  position: fixed;
+  top: 85px;
+  right: 0px;
+}
+.images__image-bottom-left {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+.images__image-bottom-right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+/*# sourceMappingURL=main.css.map */
