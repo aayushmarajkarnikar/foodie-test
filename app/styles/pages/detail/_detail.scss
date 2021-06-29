@@ -1,0 +1,205 @@
+body {
+    background: var(--foodie-bg) !important;
+}
+
+.detail-main-content {
+    &__featured-container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 180px;
+        &__title {
+            margin-top: 80px;
+            h2 {
+                @extend .fonts;
+                font-size: 34px;
+                text-align: center;
+                color: var(--foodie-text-color);
+            }
+            h5 {
+                @extend .fonts;
+                font-size: 28px;
+                color: var(--foodie-cardtitle-color);
+                text-align: center;
+                margin-top: 10px;
+                font-family: "Graphik-Medium";
+                font-weight: 500;
+            }
+        }
+        &__featured-img {
+            margin-top: 50px;
+        }
+        &__icon-details {
+            display: flex;
+            margin-top: 40px;
+            justify-content: space-between;
+            align-items: center;
+            &--time {
+                display: flex;
+                align-items: center;
+                .card-title {
+                    font-size: 16px;
+                    font-family: "Graphik-Regular";
+                    font-weight: 100;
+                    color: var(--foodie-text-color);
+                    margin-left: 30px;
+                }
+            }
+        }
+        &__seperator {
+            background-color: var(--foodie-seperator-color);
+            height: 1px;
+            margin-top: 44px;
+            margin-bottom: 40px;
+            opacity: 0.4;
+        }
+        &__details {
+            margin-top: 40px;
+            p {
+                font-size: 16;
+                font-weight: 200;
+                font-family: "Graphik-Regular";
+                color: var(--foodie-text-color);
+                display: block;
+            }
+        }
+        &__ingredients {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            h2 {
+                font-size: 34px;
+                font-weight: 600;
+                font-family: "Graphik-Medium";
+                color: var(--foodie-text-color);
+            }
+            &--detail {
+                display: flex;
+                align-items: center;
+                .ingredients--detail--time {
+                    display: flex;
+                    margin-left: 32px;
+                    img {
+                        margin-right: 10px;
+                    }
+                    span {
+                        @extend .fonts;
+                        font-size: 16px;
+                        font-weight: 100;
+                        font-family: "Graphik-Regular";
+                    }
+                }
+            }
+        }
+        &__ingredients--list {
+            display: flex;
+            justify-content: space-between;
+            .ingredients--list--content {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    padding-left: 32px;
+                }
+                li {
+                    list-style: none;
+                    margin-bottom: 32px;
+                    position: relative;
+                    font-size: 16px;
+                    color: var(--foodie-text-color);
+                    font-weight: 100;
+                    font-family: "Graphik-Regular";
+                    @extend .fonts;
+                    &::before {
+                        content: "";
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #c4c4c4;
+                        position: absolute;
+                        border-radius: 20px;
+                        left: -32px;
+                    }
+                }
+            }
+        }
+        &__direction-list {
+            margin-top: 40px;
+            .featured-container__direction-list1 {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 0px;
+                margin-bottom: 30px;
+                h2 {
+                    font-size: 34px;
+                    color: var(--foodie-text-color);
+                    margin-right: 32px;
+                }
+                p {
+                    font-size: 16px;
+                    @extend .fonts;
+                    font-weight: 100;
+                    font-family: "Graphik-Regular";
+                    color: var(--foodie-text-colorsecondary);
+                }
+            }
+            .featured-container__direction-img1 {
+                margin-top: 42px;
+                margin-bottom: 42px;
+            }
+        }
+    }
+}
+
+//media-queries
+@media (max-width: 768px) {
+    .detail-main-content__featured-container {
+        &__icon-details--time {
+            display: block;
+            text-align: center;
+            .card-title {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+        &__ingredients--detail .ingredients--detail--time span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 524px) {
+    .detail-main-content__featured-container {
+        &__title {
+            h2 {
+                font-size: 26px;
+            }
+            h5 {
+                font-size: 22px;
+            }
+        }
+        &__ingredients h2 {
+            font-size: 26px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .detail-main-content__featured-container {
+        &__title {
+            h2 {
+                font-size: 22px;
+            }
+            h5 {
+                font-size: 18px;
+            }
+        }
+        &__ingredients h2 {
+            font-size: 20px;
+        }
+        &__icon-details {
+            flex-direction: column;
+            &--time {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

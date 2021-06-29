@@ -1,0 +1,212 @@
+body {
+    background: var(--foodie-bg);
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-wrap {
+    margin-top: 40px;
+    &__brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__navigation ul {
+            display: flex;
+            list-style-type: none;
+        }
+    }
+}
+
+.primary-button--unfilled {
+    background-color: transparent;
+    @extend .button;
+    a {
+        @extend .a;
+        color: var(--foodie-link-color);
+    }
+}
+
+.secondary-button--filled {
+    @extend .button;
+    background-color: black;
+    a {
+        @extend .a;
+        font-size: var(--foodie-small-font);
+        color: white;
+    }
+    &:hover {
+        background-color: var(--foodie-primary);
+    }
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    &__title h1 {
+        @extend .fonts;
+        text-align: center;
+    }
+    &__search-bar {
+        display: flex;
+        padding: 24px;
+        background: var(--foodie-input-bg);
+        margin-top: 32px;
+
+        &__input {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        input {
+            width: 30.25rem;
+            padding: 20px 24px;
+            font-size: 16px;
+            font-family: "Graphik-Regular";
+            font-weight: normal;
+            border-radius: 5px;
+            border-style: none;
+            color: var(--foodie-text-color);
+            margin-right: 16px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+        }
+        img {
+            position: absolute;
+            right: 2rem;
+        }
+
+        &__select-meals-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .select-meals-button--filled {
+                background-color: white;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+                height: 62px;
+                padding-right: 50px;
+                padding-left: 20px;
+                margin-right: 12px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                select {
+                    -webkit-appearance: none;
+                    color: var(--foodie-text-color);
+                    font-family: "Graphik-Regular";
+                    outline: none;
+                    border: none;
+                    text-transform: none;
+                }
+                img {
+                    position: absolute;
+                    right: 16px;
+                }
+            }
+            .cook-button--filled {
+                background-color: var(--foodie-primary);
+                padding: 19px 40px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
+.images {
+    &__image-top {
+        position: fixed;
+        top: 85px;
+        right: 0px;
+    }
+    &__image-bottom-left {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+    &__image-bottom-right {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+//media-query
+@media (max-width: 960px) {
+    .main-content__search-bar {
+        &__input {
+            width: 20.25rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content__search-bar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__input {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        input {
+            margin-right: 0px;
+        }
+        &__select-meals-button {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .select-meals-button--filled {
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        &__title h1 {
+            font-size: 48px;
+        }
+    }
+    .images {
+        &__image-top {
+            height: 80px;
+        }
+        &__image-bottom-left {
+            height: 260px;
+        }
+        &__image-bottom-right {
+            height: 160px;
+        }
+    }
+}
+
+@media (max-width: 545px) {
+    .main-content {
+        &__title h1 {
+            font-size: 32px;
+        }
+        &__searchbar {
+            max-width: 410px;
+        }
+    }
+    .images {
+        &__image-top {
+            height: 60px;
+        }
+        &__image-bottom-left {
+            height: 240px;
+        }
+        &__image-bottom-right {
+            height: 140px;
+        }
+    }
+}

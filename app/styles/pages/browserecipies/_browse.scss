@@ -1,0 +1,118 @@
+body {
+    background: var(--foodie-bg) !important;
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.detail-header-wrap {
+    margin-top: 40px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    &__brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__search-bar {
+            position: relative;
+            display: flex;
+            input {
+                width: 50.06rem;
+                padding: 20px 24px;
+                font-size: 16px;
+                font-family: "Graphik-Regular";
+                font-weight: normal;
+                border-radius: 5px;
+                border-style: none;
+                color: var(--foodie-text-color);
+                margin-right: 16px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+            }
+            .search-bar__search {
+                position: absolute;
+                right: 70px;
+                top: 20px;
+            }
+        }
+    }
+}
+.browse-content {
+    margin-top: 180px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+        h2 {
+            @extend .fonts;
+            font-size: 34px;
+        }
+        &__pill-terms {
+            display: flex;
+            align-items: baseline;
+
+            span {
+                @extend .fonts;
+                font-size: 16px;
+                font-family: "Graphik-Regular";
+                padding: 10px 18px;
+                background: white;
+                box-shadow: 0px 0px 5px rgb(0 0 0 / 7%);
+                border-radius: 40px;
+                margin-left: 10px;
+                a {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .detail-header-wrap__brand__search-bar input {
+        width: 32rem;
+    }
+}
+@media (max-width: 992px) {
+    .detail-header-wrap__brand__search-bar input {
+        width: 22rem;
+    }
+    .browse-content__header {
+        display: block;
+        &__pill-terms span {
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+    }
+    .browse-content__recipies-container {
+        margin: 0px;
+        &__card {
+            margin-bottom: 40px;
+            margin: top 40px;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width: 765px) {
+    .detail-header-wrap__brand__search-bar {
+        display: none;
+    }
+    .browse-content__recipies-container {
+        .row {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
